@@ -39,13 +39,14 @@ In this project, we will provision a server using Terraform.  After the server i
 
 ## Steps to Provision/Orchestrate Server Creation
 1. Install terraform
-2. Add your AWS_ACCESS_KEY_ID and AWS_SECRET_ACCESS_KEY in your environment variables.
+2. Add your AWS_ACCESS_KEY_ID and AWS_SECRET_ACCESS_KEY in your environment variables. 
 ```
 export AWS_ACCESS_KEY_ID="aws_access_key"
 export AWS_SECRET_ACCESS_KEY="aws_secret_key"
 ```
+Check out `env.sh.sample` file.  You can add it there and do a `$ source env.sh.sample`.
 3. Go to `provision` folder.
-4. Create an SSH key pair using "dev_key" as the name. 
+4. Create an SSH key pair using `dev_key` as the name. 
 ```
 $ ssh-keygen -q -f dev_key -C aws_terraform_ssh_key -N ''
 ```
@@ -57,5 +58,6 @@ $ ssh-keygen -q -f dev_key -C aws_terraform_ssh_key -N ''
 ## Steps to Configure Server
 1. Install Ansible
 2. Go to `configure` folder
-3. Get the IP of the target server and create `inventory` file
-4. Run the Ansible playbook `$ ansible-playbook -i inventory docker.yml`
+3. Create an `inventory` file from `inventory.template`
+4. Get the IP of the target server and add it in the `inventory` file
+5. Run the Ansible playbook `$ ansible-playbook -i inventory docker.yml`
