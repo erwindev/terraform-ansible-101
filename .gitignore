@@ -1,0 +1,12 @@
+.terraform
+*.tfstate
+*.tfstate.backup
+*_key
+*_key.pub
+env.sh
+.DS_Store
+*.retry
+ssh.cfg
+inventory
+config
+*.pub

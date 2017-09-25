@@ -1,0 +1,9 @@
+---
+- name: Setup Web Servers
+  hosts: docker_server
+  remote_user: ubuntu
+  become: yes
+  
+  roles:
+    - base
+    - docker
