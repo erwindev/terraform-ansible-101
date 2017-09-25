@@ -1,6 +1,36 @@
 # Terraform Ansible 101 
 
-This project is a Terraform and Ansible tutorial.
+In this project, we will provision a server using Terraform.  After the server is provisioned, we will configure the server by installing Docker in it.  We will use Ansible to install Docker in the server.
+
+## What is Terraform?
+* Tool created by Hashicorp
+* Infrastructure as Code
+* Build server and network infrastructure
+* Configuration files that describe the state of the components in your infrastructure
+* Declarative style when writing code
+
+## Common commands you will use in Terraform
+* terraform init
+* terraform plan
+* terraform apply
+* terraform destroy
+
+## What is Ansible?
+* Tool created by Redhat
+* Simple IT automation engine
+* Configuration management tool
+* Agentless
+* Requires SSH access to the target server
+* Requires Python to be installed in the target server
+* Procedural style when writing code
+
+## Other automation tools
+* Puppet
+* Chef
+* CFEngine
+* Vagrant
+* SaltStack
+* CloudFormation
 
 ## Pre-requisites
 1. Signup for an AWS Account
