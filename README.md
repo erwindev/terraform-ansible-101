@@ -7,7 +7,7 @@ This project is a Terraform and Ansible tutorial.
 2. Install [Terraform](https://www.terraform.io/downloads.html)
 3. Install [Ansible](http://docs.ansible.com/ansible/latest/intro_installation.html)
 
-## Steps to Setup Terraform
+## Steps to Provision Servers
 1. Install terraform
 2. Add your AWS_ACCESS_KEY_ID and AWS_SECRET_ACCESS_KEY in your environment variables.
 ```
@@ -22,3 +22,10 @@ $ ssh-keygen -q -f dev_key -C aws_terraform_ssh_key -N ''
 5. Run `$ terraform init` to get the provider.  In this case, it is AWS.
 6. Run `terraform plan` to see what Terraform is going to be applied in your AWS environment. 
 7. Run `terraform apply`.
+
+
+## Steps to Configure Servers
+1. Install Ansible
+2. Go to `configure` folder
+3. Get the IP of the target server and create `inventory` file
+4. Run the Ansible playbook `$ ansible-playbook -i inventory docker.yml`
